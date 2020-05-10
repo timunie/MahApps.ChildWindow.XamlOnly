@@ -1,0 +1,1 @@
+MahApps.ChildWindow.XamlOnly
