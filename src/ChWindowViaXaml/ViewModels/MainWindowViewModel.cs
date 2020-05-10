@@ -6,30 +6,35 @@ using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using ChWindowViaXaml.ChildWindows;
+using MahApps.Metro.Controls;
+using MahApps.Metro.SimpleChildWindow;
 
 namespace ChWindowViaXaml.ViewModels
 {
     public class MainWindowViewModel: ViewModelBase
     {
 
-
-        // OpenChWindow1 command definition
-        private RelayCommand _openChWindow1;       
-        public RelayCommand OpenChWindow1
+        public MainWindowViewModel()
         {
-            get
-            {
-                return _openChWindow1
-                    ?? (_openChWindow1 = new RelayCommand(ExecuteOpenChWindow1));
-            }
+            // Define this in the constructor because then you can access local Methods as well.
+            OpenChWindow1 = new SimpleCommand((param) => { ExecuteOpenChWindow1(param); });
         }
 
-        private void ExecuteOpenChWindow1()
-        {
 
-            ChWindow1_VM _chWindow1_VM = new ChWindow1_VM();
-            if (_chWindow1_VM != null)
-                _chWindow1_VM.ChWindow1OpenClose = true;
+        // OpenChWindow1 command definition     
+        public SimpleCommand OpenChWindow1 { get; } 
+
+        // Let's provide the window where to render the ChildWindow as a parameter
+        private void ExecuteOpenChWindow1(object param)
+        {
+            if (param is MetroWindow window)
+            {
+                ChWindow1_VM _chWindow1_VM = new ChWindow1_VM();
+
+                window.ShowChildWindowAsync(new ChWindow1() { DataContext = _chWindow1_VM });
+            }
+
+           
 
 
 

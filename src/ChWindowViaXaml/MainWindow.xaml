@@ -21,7 +21,9 @@
     <Grid x:Name="RootGrid">
         <StackPanel>
 
-            <Button Command="{Binding OpenChWindow1, Mode=OneWay}" Content=" ChWindow1 via XAML(binding)" />
+            <Button Command="{Binding OpenChWindow1}" 
+                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=mah:MetroWindow}}"
+                    Content=" ChWindow1 via XAML(binding)" />
             <Button Click="Button_Click" Content=" ChWindow1 via Event (Code Behind)" />
 
         </StackPanel>
