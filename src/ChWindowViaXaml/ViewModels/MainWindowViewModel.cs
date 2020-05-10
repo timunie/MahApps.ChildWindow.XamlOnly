@@ -17,15 +17,15 @@ namespace ChWindowViaXaml.ViewModels
         public MainWindowViewModel()
         {
             // Define this in the constructor because then you can access local Methods as well.
-            OpenChWindow1 = new SimpleCommand((param) => { ExecuteOpenChWindow1(param); });
+            OpenChWindow1 = new RelayCommand<MetroWindow>((param) => { ExecuteOpenChWindow1(param); });
         }
 
 
         // OpenChWindow1 command definition     
-        public SimpleCommand OpenChWindow1 { get; } 
+        public RelayCommand<MetroWindow> OpenChWindow1 { get; } 
 
         // Let's provide the window where to render the ChildWindow as a parameter
-        private void ExecuteOpenChWindow1(object param)
+        private void ExecuteOpenChWindow1(MetroWindow param)
         {
             if (param is MetroWindow window)
             {
