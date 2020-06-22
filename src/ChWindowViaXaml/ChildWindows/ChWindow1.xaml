@@ -32,7 +32,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <Button Content="Do something" />
+            <Button Content="Show another ChildWindow" Click="ShowAnotherChildWindow_Click" />
 
         </StackPanel>
     </Grid>

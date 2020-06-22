@@ -40,8 +40,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
-      <HintPath>..\packages\ControlzEx.4.3.0-alpha0085\lib\net45\ControlzEx.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\ControlzEx.4.3.0\lib\net45\ControlzEx.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -56,8 +55,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
-      <HintPath>..\packages\MahApps.Metro.2.0.0-alpha0775\lib\net452\MahApps.Metro.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\MahApps.Metro.2.0.1\lib\net452\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro.SimpleChildWindow, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ca3e0454e54ef52a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.SimpleChildWindow.2.0.0-alpha0037\lib\net452\MahApps.Metro.SimpleChildWindow.dll</HintPath>

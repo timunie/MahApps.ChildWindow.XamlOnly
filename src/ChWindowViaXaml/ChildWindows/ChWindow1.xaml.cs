@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 using MahApps.Metro.SimpleChildWindow;
 
 namespace ChWindowViaXaml.ChildWindows
@@ -28,8 +29,23 @@ namespace ChWindowViaXaml.ChildWindows
             
         }
 
+        private async void ShowAnotherChildWindow_Click(object sender, RoutedEventArgs e)
+        {
+            // try to get the parent window
+            var parent = this.TryFindParent<MetroWindow>();
 
-
-
+            if (parent != null)
+            {
+                await parent.ShowChildWindowAsync(new ChildWindow()
+                {
+                    Content = "It works :-)",
+                    Title = "Test",
+                    CloseByEscape = true,
+                    ShowCloseButton = true,
+                    CloseOnOverlay = true,
+                    Padding = new Thickness(10)
+                });
+            }
+        }
     }
 }
